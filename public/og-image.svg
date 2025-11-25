@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1B365D"/>
+
+  <!-- Abstract molecular/scientific pattern -->
+  <g opacity="0.12">
+    <!-- Large decorative circles -->
+    <circle cx="100" cy="530" r="200" stroke="#4A90A4" stroke-width="2" fill="none"/>
+    <circle cx="100" cy="530" r="150" stroke="#4A90A4" stroke-width="1" fill="none"/>
+    <circle cx="1100" cy="100" r="180" stroke="#2E5A8C" stroke-width="2" fill="none"/>
+    <circle cx="1100" cy="100" r="120" stroke="#2E5A8C" stroke-width="1" fill="none"/>
+    <circle cx="1150" cy="550" r="100" stroke="#4A90A4" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Hexagonal molecular structures -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="1.5" fill="none">
+    <path d="M150 100 L190 120 L190 160 L150 180 L110 160 L110 120 Z"/>
+    <path d="M1050 450 L1090 470 L1090 510 L1050 530 L1010 510 L1010 470 Z"/>
+  </g>
+
+  <!-- Small nodes -->
+  <g fill="#4A90A4" opacity="0.25">
+    <circle cx="200" cy="150" r="6"/>
+    <circle cx="350" cy="100" r="4"/>
+    <circle cx="900" cy="80" r="5"/>
+    <circle cx="1000" cy="550" r="6"/>
+    <circle cx="150" cy="400" r="4"/>
+  </g>
+
+  <!-- Logo Mark - Stylized A -->
+  <g transform="translate(530, 180)">
+    <path d="M20 120 L70 20 L120 120" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <line x1="35" y1="85" x2="105" y2="85" stroke="#4A90A4" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="70" cy="40" r="8" fill="#4A90A4"/>
+  </g>
+
+  <!-- Company Name -->
+  <text x="600" y="360" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="600" fill="#FFFFFF">Adelphi Biosciences</text>
+
+  <!-- Tagline -->
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" fill="#94A3B8" letter-spacing="3">PHARMACEUTICAL REGULATORY AFFAIRS CONSULTING</text>
+
+  <!-- Value proposition -->
+  <text x="600" y="480" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" fill="#4A90A4">Strategic Guidance from IND to FDA Approval</text>
+
+  <!-- Bottom accent -->
+  <rect x="450" y="520" width="300" height="3" rx="1.5" fill="#4A90A4"/>
+
+  <!-- Credential badges -->
+  <g transform="translate(600, 560)" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748B">
+    <text x="-200" y="0">Named on FDA Approval Letter</text>
+    <text x="0" y="0">US Patent Holder</text>
+    <text x="200" y="0">20+ Years Experience</text>
+  </g>
+
+  <!-- Divider dots -->
+  <circle cx="500" cy="555" r="2" fill="#4A90A4"/>
+  <circle cx="700" cy="555" r="2" fill="#4A90A4"/>
+</svg>

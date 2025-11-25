@@ -1,0 +1,25 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- FDA Submissions Icon - Documents with FDA badge -->
+  <rect width="120" height="120" rx="16" fill="#F7FAFC"/>
+
+  <!-- Stack of documents -->
+  <rect x="25" y="35" width="45" height="55" rx="3" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.5"/>
+  <rect x="30" y="30" width="45" height="55" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1.5"/>
+  <rect x="35" y="25" width="45" height="55" rx="3" fill="white" stroke="#1B365D" stroke-width="2"/>
+
+  <!-- Document lines -->
+  <g stroke="#CBD5E0" stroke-width="2" stroke-linecap="round">
+    <line x1="42" y1="38" x2="72" y2="38"/>
+    <line x1="42" y1="48" x2="72" y2="48"/>
+    <line x1="42" y1="58" x2="65" y2="58"/>
+    <line x1="42" y1="68" x2="58" y2="68"/>
+  </g>
+
+  <!-- FDA Badge -->
+  <circle cx="82" cy="78" r="22" fill="#1B365D"/>
+  <text x="82" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="white">FDA</text>
+
+  <!-- Checkmark on badge -->
+  <circle cx="92" cy="62" r="10" fill="#38A169"/>
+  <path d="M88 62 L91 65 L97 59" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

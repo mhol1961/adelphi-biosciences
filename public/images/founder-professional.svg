@@ -1,0 +1,22 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Professional headshot placeholder with initials -->
+  <rect width="400" height="400" fill="#F7FAFC"/>
+
+  <!-- Circular background -->
+  <circle cx="200" cy="200" r="180" fill="#1B365D"/>
+
+  <!-- Subtle pattern overlay -->
+  <g opacity="0.1">
+    <circle cx="200" cy="200" r="160" stroke="#4A90A4" stroke-width="2" fill="none"/>
+    <circle cx="200" cy="200" r="140" stroke="#4A90A4" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Inner circle for contrast -->
+  <circle cx="200" cy="200" r="130" fill="#243f6b"/>
+
+  <!-- Initials -->
+  <text x="200" y="220" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="90" font-weight="600" fill="#FFFFFF">PP</text>
+
+  <!-- Decorative ring -->
+  <circle cx="200" cy="200" r="150" stroke="#4A90A4" stroke-width="3" fill="none" opacity="0.5"/>
+</svg>

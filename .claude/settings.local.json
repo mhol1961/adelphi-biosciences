@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm install:*)",
+      "Bash(npm init:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(npm run build:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npx next dev:*)",
+      "WebSearch",
+      "WebFetch(domain:www.ladybugz.com)",
+      "WebFetch(domain:embarkwork.com)",
+      "WebFetch(domain:www.consultingsuccess.com)",
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:www.iqvia.com)",
+      "Skill(ui-ux-expert)",
+      "Bash(pkill:*)",
+      "Bash(npm run start:*)",
+      "Bash(lsof:*)",
+      "Bash(netstat:*)",
+      "Bash(ss:*)",
+      "Bash(npm rebuild:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

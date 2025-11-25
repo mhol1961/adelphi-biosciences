@@ -1,0 +1,44 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Agency Meetings Icon - People/handshake with building -->
+  <rect width="120" height="120" rx="16" fill="#F7FAFC"/>
+
+  <!-- Building silhouette (representing FDA/agency) -->
+  <g fill="#1B365D">
+    <rect x="20" y="50" width="35" height="45" rx="2"/>
+    <rect x="25" y="35" width="25" height="20"/>
+    <!-- Building windows -->
+    <rect x="27" y="58" width="8" height="8" rx="1" fill="#F7FAFC"/>
+    <rect x="40" y="58" width="8" height="8" rx="1" fill="#F7FAFC"/>
+    <rect x="27" y="72" width="8" height="8" rx="1" fill="#F7FAFC"/>
+    <rect x="40" y="72" width="8" height="8" rx="1" fill="#F7FAFC"/>
+    <!-- Door -->
+    <rect x="33" y="82" width="9" height="13" rx="1" fill="#4A90A4"/>
+  </g>
+
+  <!-- Column detail on building -->
+  <rect x="35" y="38" width="5" height="14" fill="#2E5A8C"/>
+
+  <!-- Person 1 (client) -->
+  <g>
+    <circle cx="75" cy="45" r="10" fill="#4A90A4"/>
+    <path d="M60 95 L60 70 C60 62 67 55 75 55 C83 55 90 62 90 70 L90 95" fill="#4A90A4"/>
+  </g>
+
+  <!-- Person 2 (consultant) -->
+  <g>
+    <circle cx="95" cy="50" r="8" fill="#2E5A8C"/>
+    <path d="M83 95 L83 75 C83 68 88 62 95 62 C102 62 107 68 107 75 L107 95" fill="#2E5A8C"/>
+  </g>
+
+  <!-- Handshake/connection -->
+  <g stroke="#38A169" stroke-width="2" stroke-linecap="round">
+    <path d="M58 65 L68 60"/>
+    <circle cx="63" cy="62.5" r="4" fill="#38A169"/>
+  </g>
+
+  <!-- Speech bubbles -->
+  <g fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1">
+    <ellipse cx="80" cy="30" rx="12" ry="8"/>
+    <ellipse cx="100" cy="35" rx="10" ry="6"/>
+  </g>
+</svg>

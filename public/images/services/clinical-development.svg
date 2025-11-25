@@ -1,0 +1,32 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clinical Development Icon - Flask/beaker with growth chart -->
+  <rect width="120" height="120" rx="16" fill="#F7FAFC"/>
+
+  <!-- Erlenmeyer Flask -->
+  <g stroke="#1B365D" stroke-width="2.5" fill="none">
+    <path d="M45 25 L45 45 L25 85 L25 90 C25 93 28 95 35 95 L65 95 C72 95 75 93 75 90 L75 85 L55 45 L55 25"/>
+    <line x1="42" y1="25" x2="58" y2="25"/>
+  </g>
+
+  <!-- Liquid in flask -->
+  <path d="M30 80 L70 80 L75 85 L75 90 C75 93 72 95 65 95 L35 95 C28 95 25 93 25 90 L25 85 Z" fill="#4A90A4" fill-opacity="0.3"/>
+
+  <!-- Bubbles -->
+  <circle cx="40" cy="82" r="3" fill="#4A90A4" fill-opacity="0.5"/>
+  <circle cx="55" cy="78" r="4" fill="#4A90A4" fill-opacity="0.5"/>
+  <circle cx="48" cy="70" r="2" fill="#4A90A4" fill-opacity="0.5"/>
+
+  <!-- Growth chart -->
+  <g stroke="#38A169" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 90 L80 50 L95 50"/>
+    <path d="M82 85 L87 75 L92 70"/>
+    <circle cx="92" cy="70" r="3" fill="#38A169"/>
+  </g>
+
+  <!-- Phase indicators -->
+  <g fill="#2E5A8C" font-family="system-ui, sans-serif" font-size="8" font-weight="600">
+    <text x="82" y="98">I</text>
+    <text x="87" y="98">II</text>
+    <text x="92" y="98">III</text>
+  </g>
+</svg>
