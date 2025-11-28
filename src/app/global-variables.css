@@ -1,0 +1,42 @@
+:root {
+  /* PRIMARY COLORS - Trust & Authority */
+  --color-primary-navy: #0A2540;
+  /* Deep Navy for Headers/Footer */
+  --color-primary-blue: #1C3F60;
+  /* Lighter Navy for secondary elements */
+
+  /* ACCENT COLORS - Innovation & Growth (The "Bio" aspect) */
+  --color-accent-teal: #2E8B57;
+  /* Sea Green for primary buttons/icons */
+  --color-accent-mint: #E0F2F1;
+  /* Very light mint for card backgrounds */
+  --color-highlight-green: #3CB371;
+  /* Brighter green for hover states */
+
+  /* NEUTRALS - The "Austin Limestone" vibe */
+  --color-bg-white: #FFFFFF;
+  --color-bg-offwhite: #F9FAFB;
+  /* Soft grey for section breaks */
+  --color-text-body: #334155;
+  /* Slate grey for readability */
+  --color-text-muted: #64748B;
+
+  /* TYPOGRAPHY */
+  /* Fonts will be set in layout.tsx via Next.js Font optimization, mapped to these variables */
+  --font-heading: var(--font-merriweather), serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* SPACING & RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  /* For cards */
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  /* For pill-shaped buttons */
+
+  /* SHADOWS */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}

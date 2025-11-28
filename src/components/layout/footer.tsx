@@ -91,13 +91,24 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center group">
-              <Image
-                src="/images/logo-white.svg"
-                alt="Adelphi Biosciences"
-                width={180}
-                height={44}
-                className="h-11 w-auto"
-              />
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/logo2.png"
+                  alt="Adelphi Biosciences"
+                  width={270}
+                  height={67}
+                  className="h-21 w-auto object-contain"
+                  unoptimized
+                />
+                <div className="hidden lg:flex flex-col border-l pl-3 border-white/30">
+                  <span className="text-[11px] font-medium italic text-white/80 leading-tight">
+                    Regulatory Expertise
+                  </span>
+                  <span className="text-[11px] font-medium italic text-white/80 leading-tight">
+                    for Pharma Innovation
+                  </span>
+                </div>
+              </div>
             </Link>
             <p className="mt-8 text-white/60 leading-relaxed max-w-sm text-[15px]">
               Strategic regulatory affairs consulting for life sciences. Expert guidance from IND to

@@ -5,11 +5,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, X, ArrowRight, Sparkles, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Services", href: "/services" },
+  {
+    name: "Services",
+    href: "/services",
+    children: [
+      { name: "Regulatory Strategy", href: "/services/regulatory-strategy" },
+      { name: "CMC & Quality Compliance", href: "/services/cmc-quality" },
+      { name: "FDA Submissions", href: "/services/fda-submissions" },
+      { name: "Global Submissions", href: "/services/global-submissions" },
+      { name: "Lifecycle Management", href: "/services/lifecycle-management" },
+      { name: "Due Diligence", href: "/services/due-diligence" },
+    ]
+  },
   { name: "About", href: "/about" },
   { name: "Insights", href: "/insights" },
   { name: "Contact", href: "/contact" },
@@ -18,6 +29,7 @@ const navigation = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,6 +43,7 @@ export function Header() {
   // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setHoveredItem(null);
   }, [pathname]);
 
   return (
@@ -51,72 +64,121 @@ export function Header() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Image
-                src={isScrolled ? "/images/logo.svg" : "/images/logo-white.svg"}
-                alt="Adelphi Biosciences"
-                width={180}
-                height={44}
-                className="h-11 w-auto transition-all duration-300"
-                priority
-              />
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/logo2.png"
+                  alt="Adelphi Biosciences"
+                  width={207}
+                  height={52}
+                  className="h-16 w-auto object-contain"
+                  priority
+                  unoptimized
+                />
+                <div className={`hidden lg:flex flex-col border-l pl-3 transition-colors ${isScrolled ? 'border-gray-300' : 'border-white/30'
+                  }`}>
+                  <span className={`text-[11px] font-medium italic transition-colors leading-tight ${isScrolled ? 'text-gray-600' : 'text-white/80'
+                    }`}>
+                    Regulatory Expertise
+                  </span>
+                  <span className={`text-[11px] font-medium italic transition-colors leading-tight ${isScrolled ? 'text-gray-600' : 'text-white/80'
+                    }`}>
+                    for Pharma Innovation
+                  </span>
+                </div>
+              </div>
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navigation.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = pathname === item.href || (item.children && pathname.startsWith(item.href));
+              const hasChildren = item.children && item.children.length > 0;
+
               return (
-                <Link
+                <div
                   key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "relative px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300",
-                    isScrolled
-                      ? isActive
-                        ? "text-azure"
-                        : "text-charcoal hover:text-azure"
-                      : isActive
-                        ? "text-white"
-                        : "text-white/80 hover:text-white"
-                  )}
+                  className="relative group"
+                  onMouseEnter={() => setHoveredItem(item.name)}
+                  onMouseLeave={() => setHoveredItem(null)}
                 >
-                  <span className="relative z-10">{item.name}</span>
-                  {/* Active/Hover Background */}
-                  <motion.span
+                  <Link
+                    href={item.href}
                     className={cn(
-                      "absolute inset-0 rounded-xl transition-colors duration-300",
+                      "relative px-5 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 flex items-center gap-1",
                       isScrolled
                         ? isActive
-                          ? "bg-azure/10"
-                          : "bg-transparent hover:bg-cloud"
+                          ? "text-azure"
+                          : "text-charcoal hover:text-azure"
                         : isActive
-                          ? "bg-white/15"
-                          : "bg-transparent hover:bg-white/10"
+                          ? "text-white"
+                          : "text-white/80 hover:text-white"
                     )}
-                    layoutId="navBackground"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                  />
-                  {/* Active Indicator Line */}
-                  {isActive && (
+                  >
+                    <span className="relative z-10">{item.name}</span>
+                    {hasChildren && <ChevronDown className="w-4 h-4 relative z-10" />}
+
+                    {/* Active/Hover Background */}
                     <motion.span
                       className={cn(
-                        "absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full",
-                        isScrolled ? "bg-azure" : "bg-white"
+                        "absolute inset-0 rounded-xl transition-colors duration-300",
+                        isScrolled
+                          ? isActive
+                            ? "bg-azure/10"
+                            : "bg-transparent hover:bg-cloud"
+                          : isActive
+                            ? "bg-white/15"
+                            : "bg-transparent hover:bg-white/10"
                       )}
-                      layoutId="navIndicator"
-                      initial={{ width: 0 }}
-                      animate={{ width: "60%" }}
-                      transition={{ duration: 0.3 }}
+                      layoutId={`navBackground-${item.name}`}
+                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
                     />
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  {hasChildren && (
+                    <AnimatePresence>
+                      {hoveredItem === item.name && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-2"
+                        >
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[var(--color-accent-teal)] transition-colors"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   )}
-                </Link>
+                </div>
               );
             })}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
+            <Link
+              href="/portal"
+              className={cn(
+                "group relative inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300",
+                isScrolled
+                  ? "text-navy border border-navy/10 hover:bg-navy/5"
+                  : "text-white border border-white/30 hover:bg-white/10"
+              )}
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Client Portal</span>
+            </Link>
+
             <Link
               href="/contact"
               className={cn(

@@ -75,31 +75,48 @@
      ══════════════════════════════════════════════════════════════ */
 
   /* Primary Navy Spectrum - Deep Trust & Authority */
-  --navy-dark: #050A14;      /* Deepest - footer, overlays */
-  --midnight: #0A1628;       /* Rich midnight - hero backgrounds */
-  --navy: #0D1F3C;           /* Primary navy - headers, buttons */
-  --navy-light: #1A365D;     /* Lighter navy - hover states */
+  --navy-dark: #050A14;
+  /* Deepest - footer, overlays */
+  --midnight: #0A2540;
+  /* Rich midnight - hero backgrounds */
+  --navy: #0A2540;
+  /* Primary navy - headers, buttons */
+  --navy-light: #1C3F60;
+  /* Lighter navy - hover states */
 
   /* Accent Blue Spectrum - Innovation & Science */
-  --sapphire: #1E40AF;       /* Deep sapphire - links, accents */
-  --azure: #3B82F6;          /* Primary azure - CTAs, highlights */
-  --azure-light: #60A5FA;    /* Light azure - hover, gradients */
+  --sapphire: #1C3F60;
+  /* Deep sapphire - links, accents */
+  --azure: #2E8B57;
+  /* Primary azure - CTAs, highlights */
+  --azure-light: #3CB371;
+  /* Light azure - hover, gradients */
 
   /* Warm Metallic Accents - Excellence & Achievement */
-  --gold: #D4A853;           /* Refined gold - badges, awards */
-  --gold-light: #E8C97A;     /* Light gold - hover states */
-  --amber: #F59E0B;          /* Amber - warnings, highlights */
+  --gold: #D4A853;
+  /* Refined gold - badges, awards */
+  --gold-light: #E8C97A;
+  /* Light gold - hover states */
+  --amber: #F59E0B;
+  /* Amber - warnings, highlights */
 
   /* Success & Positive */
-  --emerald: #059669;        /* Emerald - success states */
-  --success: #10B981;        /* Success green */
+  --emerald: #059669;
+  /* Emerald - success states */
+  --success: #10B981;
+  /* Success green */
 
   /* Neutral Spectrum - Sophisticated Grays */
-  --charcoal: #111827;       /* Primary text */
-  --slate: #374151;          /* Secondary text */
-  --silver: #6B7280;         /* Tertiary text, captions */
-  --cloud: #F3F4F6;          /* Light backgrounds */
-  --pearl: #FAFBFC;          /* Lightest backgrounds */
+  --charcoal: #111827;
+  /* Primary text */
+  --slate: #374151;
+  /* Secondary text */
+  --silver: #6B7280;
+  /* Tertiary text, captions */
+  --cloud: #F3F4F6;
+  /* Light backgrounds */
+  --pearl: #FAFBFC;
+  /* Lightest backgrounds */
 
   /* Map to semantic tokens */
   --background: #FFFFFF;
@@ -202,7 +219,8 @@
     color: var(--charcoal);
   }
 
-  h5, h6 {
+  h5,
+  h6 {
     font-family: var(--font-display);
     @apply text-lg md:text-xl font-semibold;
     color: var(--charcoal);
@@ -265,13 +283,11 @@
    ══════════════════════════════════════════════════════════════ */
 
 .gradient-hero {
-  background: linear-gradient(
-    165deg,
-    var(--navy-dark) 0%,
-    var(--midnight) 25%,
-    var(--navy) 50%,
-    var(--navy-light) 100%
-  );
+  background: linear-gradient(165deg,
+      var(--navy-dark) 0%,
+      var(--midnight) 25%,
+      var(--navy) 50%,
+      var(--navy-light) 100%);
 }
 
 .gradient-hero-radial {
@@ -282,12 +298,10 @@
 }
 
 .gradient-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(5, 10, 20, 0.95) 0%,
-    rgba(13, 31, 60, 0.85) 50%,
-    rgba(26, 54, 93, 0.75) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(5, 10, 20, 0.95) 0%,
+      rgba(13, 31, 60, 0.85) 50%,
+      rgba(26, 54, 93, 0.75) 100%);
 }
 
 .gradient-text {
@@ -326,12 +340,10 @@
 }
 
 .gradient-dark-section {
-  background: linear-gradient(
-    180deg,
-    var(--navy-dark) 0%,
-    var(--midnight) 50%,
-    var(--navy-dark) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--navy-dark) 0%,
+      var(--midnight) 50%,
+      var(--navy-dark) 100%);
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -815,15 +827,25 @@
    ══════════════════════════════════════════════════════════════ */
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.5;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.8;
     transform: scale(1.05);
@@ -831,14 +853,27 @@
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .animate-float {
@@ -866,12 +901,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
   animation: shimmer 3s infinite;
 }
 
@@ -920,6 +953,7 @@
    ══════════════════════════════════════════════════════════════ */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
